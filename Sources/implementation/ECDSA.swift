@@ -189,7 +189,7 @@ extension secp256k1.Signing.ECDSASigner: DigestSigner, Signer {
     /// - Returns: The ECDSA Signature.
     /// - Throws: If there is a failure producing the signature.
     public func signature<D: DataProtocol>(for data: D) throws -> secp256k1.Signing.ECDSASignature {
-        try signature(for: SHA256.hash(data: data))
+        try signature(for: data)
     }
 }
 
