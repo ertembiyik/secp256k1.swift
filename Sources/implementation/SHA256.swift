@@ -39,7 +39,7 @@ public enum SHA256 {
         return convert(output)
     }
 
-    private static func convert(_ output: [UInt8]) -> SHA256Digest {
+    public static func convert(_ output: [UInt8]) -> SHA256Digest {
         let first = output[0..<8].withUnsafeBytes { $0.load(as: UInt64.self) }
         let second = output[8..<16].withUnsafeBytes { $0.load(as: UInt64.self) }
         let third = output[16..<24].withUnsafeBytes { $0.load(as: UInt64.self) }

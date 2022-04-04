@@ -34,7 +34,7 @@ import Foundation
 // MARK: - SHA256Digest + DigestPrivate
 
 public struct SHA256Digest: Digest {
-    let bytes: (UInt64, UInt64, UInt64, UInt64)
+    public let bytes: (UInt64, UInt64, UInt64, UInt64)
 
     public static var byteCount: Int {
         get { 32 }
